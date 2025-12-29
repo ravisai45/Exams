@@ -1,0 +1,177 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #D4928C;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px;
+    color:white;
+}
+
+
+.logo {
+    height: 60px;
+}
+
+
+
+.nav{
+    margin-top:15px;      
+    margin-left:40px;     
+}
+
+.nav a{
+    text-decoration:none;
+    padding:0 20px;
+    color:white;
+    font-weight:bold;
+}
+.nav a:active{
+    text-decoration: underline;
+}
+
+.nav a:hover{
+    text-decoration:underline;
+}
+
+.header-icons{
+    display:flex;
+    align-items:center;
+}
+
+.header-icons a{
+    color:white;
+    font-size:20px;
+    margin-left:20px;
+    transition:0.3s;
+}
+
+.header-icons a:hover{
+    color:#000;
+   
+}
+/* ABOUT SECTION */
+.about-section{
+    background:#D4928C;
+    padding:80px 80px;
+}
+
+/* FLEX LAYOUT */
+.about-container{
+    display:flex;
+    gap:80px;
+    align-items:center;
+}
+
+/* IMAGE */
+.about-image img{
+    width:520px;
+    height:auto;
+    display:block;
+}
+
+/* CONTENT */
+.about-content{
+    color:#fff;
+    max-width:500px;
+}
+
+.about-content h1{
+    font-size:56px;
+    margin-bottom:30px;
+    font-weight:600;
+}
+
+.about-content p{
+    font-size:16px;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+/* SOCIAL ICONS */
+.about-social{
+    margin-top:20px;
+    display:flex;
+    gap:25px;
+}
+
+.about-social a{
+    color:#fff;
+    font-size:18px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.about-social a:hover{
+   color:#000;
+}
+
+
+
+.info-section{
+    background:#D4928C;
+    padding: 90px 10px;
+}
+
+.info-box{
+    max-width:1200px;
+    margin:auto;
+    background:#C97F77;
+    padding:100px 40px;
+    text-align:center;
+}
+
+
+.info-img{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 30px;
+    color:#fff;
+   
+}
+
+
+.info-text{
+    color:#fff;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+
+.info-social{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+.info-social a{
+    color:#fff;
+    font-size:18px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.info-social a:hover{
+     color:#000;
+}
+
+
+
+
+
+
+
+
+
+
