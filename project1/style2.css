@@ -60,27 +60,25 @@ body{
    
 }
 
-/* CONTACT SECTION */
+
 .contact-section{
     background:#D4928C;
     padding:80px;
 }
 
-/* FLEX LAYOUT */
 .contact-container{
     display:flex;
     gap:80px;
     align-items:flex-start;
 }
 
-/* MAP */
 .contact-map img{
     width:500px;
     height:500px;
     object-fit:cover;
 }
 
-/* FORM */
+
 .contact-form{
     color:#fff;
     width:100%;
@@ -93,7 +91,7 @@ body{
     font-weight:600;
 }
 
-/* INPUTS */
+
 .contact-form input,
 .contact-form textarea{
     width:100%;
@@ -112,13 +110,13 @@ body{
     height:120px;
 }
 
-/* PLACEHOLDER COLOR */
+
 .contact-form input::placeholder,
 .contact-form textarea::placeholder{
     color:rgba(255,255,255,0.8);
 }
 
-/* BUTTON */
+
 .contact-form button{
     margin-top:20px;
     padding:14px 40px;

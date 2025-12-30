@@ -50,16 +50,30 @@
         <div class="contact-form">
             <h1>Get in touch</h1>
 
-            <form>
-                <input type="text" placeholder="Your name">
+            <form id="contactForm">
+    <input 
+        type="text" 
+        id="name" 
+        placeholder="Your name"
+    >
 
-                <input type="address" placeholder="Your address*" required>
+    <input 
+        type="text" 
+        id="address" 
+        placeholder="Your address*" 
+        required
+    >
 
-                <textarea placeholder="Your message..."></textarea>
+    <textarea 
+        id="message" 
+        placeholder="Your message..."
+    ></textarea>
 
-                <button type="submit">Submit</button>
-                <div id="formMessage"></div>
-            </form>
+    <button type="submit">Submit</button>
+
+    <div id="formMessage"></div>
+</form>
+
         </div>
 
     </div>
