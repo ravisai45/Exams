@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+    color: #333;
+}
+
+
+.header {
+    text-align: center;
+    padding: 25px 0;
+    background: #ffffff;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+.header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+
+.hero {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+}
+
+
+.hero-left {
+    flex: 1;
+}
+
+.hero-left h2 {
+    margin-bottom: 15px;
+}
+
+.hero-left p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.hero-left ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.hero-left li {
+    margin-bottom: 6px;
+}
+
+.hero-right {
+    flex: 1;
+    text-align: center;
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+.hero-right button {
+    padding: 8px 18px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero-right button:hover {
+    background: #1e40af;
+}
+
+
+.todo-timer {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+}
+
+
+.todo-box {
+    flex: 1;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.todo-input {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.todo-input input {
+    flex: 1;
+    padding: 8px;
+}
+
+.todo-input button {
+    padding: 8px 15px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#taskList {
+    list-style: none;
+    margin-top: 10px;
+}
+
+#taskList li {
+    background: #f1f5f9;
+    padding: 8px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+}
+
+#taskList button {
+    background: #ef4444;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.todo-info {
+    background: #fef9c3;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.clear-btn {
+    margin-top: 10px;
+    background: #e5e7eb;
+    color: #000;
+    justify-content: center;
+}
+
+
+.timer-box {
+    flex: 1;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.timer-box h3 {
+    margin: 15px 0;
+    font-size: 22px;
+}
+
+.timer-buttons button {
+    padding: 8px 15px;
+    margin-right: 10px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.map-contact {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+}
+.map-box{
+    width: 600px;
+}
+
+
+
+.contact-box {
+    width:600px;
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-box label {
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.contact-box textarea {
+    height: 80px;
+}
+
+.checkbox {
+    margin-top: 10px;
+}
+
+.contact-box button {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+}
+
+.success {
+    color: green;
+    margin-top: 10px;
+}
+
+
+
+.footer {
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+    border-top: 1px solid #e5e7eb;
+    background: #ffffff;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    margin-top: 8px;
+}
+
+
+
+.hero-right {
+  flex: 1;                    
+  text-align: center;
+}
+
+.hero-right iframe {
+  width: 100%;
+  height: 220px;
+  border: 1px solid #ccc;
+}
+
+.hero-right button {
+  margin-top: 10px;
+  padding: 6px 14px;
+}
