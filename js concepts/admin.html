@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel - Break System</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:#0e0e0e;
+    color:#fff;
+    display:flex;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:220px;
+    background:#1a1a1a;
+    padding:25px 15px;
+}
+
+.sidebar img{
+    height:35px;
+    display:block;
+    margin:0 auto 30px;
+}
+
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.menu button{
+    background:#1e1e1e;
+    color:#fff;
+    border:none;
+    padding:12px;
+    border-radius:14px;
+    cursor:pointer;
+    text-align:left;
+}
+
+.menu button.active{
+    background:#ff9f43;
+    color:#000;
+    font-weight:600;
+}
+
+/* MAIN */
+.main{
+    flex:1;
+    padding:30px;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.header-right button{
+    background:#333;
+    color:#fff;
+    border:none;
+    padding:8px 18px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+/* CARD */
+.card{
+    background:#1e1e1e;
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:25px;
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+/* INPUTS & BUTTONS */
+input{
+    padding:12px;
+    border-radius:12px;
+    border:none;
+    outline:none;
+    background:#f2f2f2;
+    margin-right:10px;
+}
+
+button.action{
+    padding:8px 14px;
+    border-radius:20px;
+    border:none;
+    background:#ff9f43;
+    font-weight:600;
+    cursor:pointer;
+    color:#000;
+    margin-right:5px;
+}
+
+.toggle{
+    padding:6px 14px;
+    border-radius:20px;
+    background:#444;
+    color:#fff;
+    cursor:pointer;
+}
+.toggle.on{
+    background:#7CFC98;
+    color:#000;
+}
+
+.green{color:#7CFC98;font-weight:600;}
+.red{color:#ff8a8a;font-weight:600;}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#333;
+}
+
+th,td{
+    padding:14px;
+    font-size:14px;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+tbody tr:hover{
+    background:#2a2a2a;
+}
+
+/* SECTIONS */
+.section{display:none;}
+.section.active{display:block;}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <img src="./322343.png">
+    <div class="menu">
+        <button class="active" onclick="showSection('users',this)">👤 Users</button>
+        <button onclick="showSection('alerts',this)">⚠ Alerts</button>
+        <button onclick="showSection('analytics',this)">📊 Analytics</button>
+        <button onclick="showSection('breaks',this)">⏱ Break Logs</button>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <div class="header">
+        <h2>Admin Dashboard</h2>
+        <div class="header-right">
+            <button onclick="location.href='login.html'">← Back</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <!-- USERS -->
+    <div class="section active" id="users">
+
+        <div class="card">
+            <h3>Add User</h3>
+            <input id="uname" placeholder="Username">
+            <input id="upass" placeholder="Password">
+            <button class="action" onclick="addUser()">Add</button>
+        </div>
+
+        <div class="card">
+            <h3>User Management</h3>
+            <input id="searchUser" placeholder="Search user..." onkeyup="renderUsers()">
+            <table>
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Status</th>
+                        <th>Break</th>
+                        <th>Active</th>
+                        <th>Break</th>
+                        <th>Limit</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="userTable"></tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3>User Details</h3>
+            <div id="userDetailBox" style="opacity:0.85">
+                Select a user to view profile, activity & break history
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ALERTS -->
+    <div class="section" id="alerts">
+        <div class="card">
+            <h3>Admin Alerts</h3>
+            <ul id="adminAlertList"></ul>
+        </div>
+    </div>
+
+    <!-- ANALYTICS -->
+    <div class="section" id="analytics">
+        <div class="card">
+            <h3>Break Analytics</h3>
+            <div id="analyticsBox"></div>
+        </div>
+    </div>
+
+    <!-- BREAK LOGS -->
+    <div class="section" id="breaks">
+        <div class="card">
+            <h3>Break Logs</h3>
+            <button class="action" onclick="downloadReport()">⬇ Download CSV</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Type</th>
+                        <th>Start</th>
+                        <th>End</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="breakTable"></tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<script>
+/* SECURITY */
+if(localStorage.getItem("role")!=="admin"){
+    location.href="login.html";
+}
+
+let users = JSON.parse(localStorage.getItem("users")) || [];
+let breakLogs = JSON.parse(localStorage.getItem("breakLogs")) || [];
+let adminAlerts = JSON.parse(localStorage.getItem("adminAlerts")) || [];
+
+/* SIDEBAR */
+function showSection(id,btn){
+    document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+    document.querySelectorAll(".menu button").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+}
+
+/* USERS */
+function renderUsers(){
+    let key = (searchUser?.value || "").toLowerCase();
+    let html="";
+
+    users.forEach((u,i)=>{
+        if(!u.username.toLowerCase().includes(key)) return;
+
+        html+=`
+        <tr>
+            <td>${u.username}</td>
+            <td class="${u.status==="ONLINE"?"green":"red"}">${u.status}</td>
+            <td>${u.breakType||"-"}</td>
+            <td>${Math.floor(u.totalActive||0)}m</td>
+            <td>${Math.floor(u.totalBreak||0)}m</td>
+            <td>${u.lunchExceeded?"❌ Exceeded":"✔ OK"}</td>
+            <td>
+                <span class="toggle ${u.status==="ONLINE"?"on":""}"
+                    onclick="toggleStatus(${i})">
+                    ${u.status==="ONLINE"?"ON":"OFF"}
+                </span>
+                <button class="action" onclick="viewUserDetails('${u.username}')">View</button>
+                <button class="action" onclick="editUsername(${i})">Edit</button>
+                <button class="action" onclick="deleteUser(${i})">Delete</button>
+            </td>
+        </tr>`;
+    });
+
+    userTable.innerHTML = html || `
+        <tr><td colspan="7" style="text-align:center;opacity:0.6">No users</td></tr>`;
+}
+
+/* USER CRUD */
+function addUser(){
+    if(!uname.value||!upass.value) return;
+    users.push({
+        username:uname.value,
+        password:upass.value,
+        status:"ONLINE",
+        breakType:null,
+        totalActive:0,
+        totalBreak:0,
+        lunchExceeded:false
+    });
+    uname.value=upass.value="";
+    saveUsers();
+}
+
+function toggleStatus(i){
+    users[i].status = users[i].status==="ONLINE"?"DISABLED":"ONLINE";
+    saveUsers();
+}
+
+function deleteUser(i){
+    users.splice(i,1);
+    saveUsers();
+}
+
+function saveUsers(){
+    localStorage.setItem("users",JSON.stringify(users));
+    renderUsers();
+}
+
+function editUsername(index){
+    let oldName = users[index].username;
+    let newName = prompt("Enter new username", oldName);
+
+    if(!newName || newName.trim()===""){
+        alert("Username cannot be empty");
+        return;
+    }
+
+    if(users.some((u,i)=>u.username===newName && i!==index)){
+        alert("Username already exists");
+        return;
+    }
+
+    users[index].username = newName;
+
+    breakLogs.forEach(b=>{
+        if(b.user === oldName){
+            b.user = newName;
+        }
+    });
+
+    adminAlerts = adminAlerts.map(a =>
+        a.includes(oldName) ? a.replace(oldName,newName) : a
+    );
+
+    localStorage.setItem("users",JSON.stringify(users));
+    localStorage.setItem("breakLogs",JSON.stringify(breakLogs));
+    localStorage.setItem("adminAlerts",JSON.stringify(adminAlerts));
+
+    alert("Username updated successfully");
+    renderUsers();
+    renderBreakLogs();
+    renderAdminAlerts();
+}
+
+
+function viewUserDetails(username){
+    const u = users.find(x=>x.username===username);
+    const logs = breakLogs.filter(b=>b.user===username);
+
+    let logHtml = logs.map(l=>
+        `${l.type} | ${l.start} → ${l.end||"ACTIVE"}`
+    ).join("<br>");
+
+    userDetailBox.innerHTML=`
+        <b>User:</b> ${u.username}<br>
+        <b>Status:</b> ${u.status}<br>
+        <b>Current Break:</b> ${u.breakType||"None"}<br>
+        <b>Total Active:</b> ${Math.floor(u.totalActive||0)} mins<br>
+        <b>Total Break:</b> ${Math.floor(u.totalBreak||0)} mins<br><br>
+        <b>Break History:</b><br>
+        ${logHtml||"No history"}
+    `;
+}
+
+
+function renderAdminAlerts(){
+    adminAlertList.innerHTML =
+        adminAlerts.length
+        ? adminAlerts.slice(-10).map(a=>`<li>${a}</li>`).join("")
+        : "<li>No alerts</li>";
+}
+
+
+function renderAnalytics(){
+    let exceeded = users.filter(u=>u.lunchExceeded).length;
+    analyticsBox.innerHTML=`
+        Total Users: <b>${users.length}</b><br>
+        Active Users: <b>${users.filter(u=>u.status==="ONLINE").length}</b><br>
+        Exceeded Lunch Limit: <b>${exceeded}</b>
+    `;
+}
+
+
+function renderBreakLogs(){
+    breakTable.innerHTML = breakLogs.map(b=>`
+        <tr>
+            <td>${b.user}</td>
+            <td>${b.type}</td>
+            <td>${b.start}</td>
+            <td>${b.end||"-"}</td>
+            <td class="${b.status==="ACTIVE"?"green":"red"}">${b.status}</td>
+        </tr>
+    `).join("") || `
+        <tr><td colspan="5" style="text-align:center">No data</td></tr>`;
+}
+
+
+function downloadReport(){
+    let csv="User,Break Type,Start,End,Status\n";
+    breakLogs.forEach(b=>{
+        csv+=`${b.user},${b.type},${b.start},${b.end||"-"},${b.status}\n`;
+    });
+    let blob=new Blob([csv],{type:"text/csv"});
+    let a=document.createElement("a");
+    a.href=URL.createObjectURL(blob);
+    a.download="break_report.csv";
+    a.click();
+}
+
+
+function logout(){
+    localStorage.clear();
+    location.href="login.html";
+}
+
+
+setInterval(()=>{
+    users = JSON.parse(localStorage.getItem("users"))||[];
+    breakLogs = JSON.parse(localStorage.getItem("breakLogs"))||[];
+    adminAlerts = JSON.parse(localStorage.getItem("adminAlerts"))||[];
+    renderUsers();
+    renderBreakLogs();
+    renderAdminAlerts();
+    renderAnalytics();
+},2000);
+
+renderUsers();
+renderBreakLogs();
+renderAdminAlerts();
+renderAnalytics();
+</script>
+
+</body>
+</html>
+
+
+
+

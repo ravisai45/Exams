@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Dashboard - Break System</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:#0e0e0e;
+    color:#fff;
+    display:flex;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:220px;
+    background:#1a1a1a;
+    padding:25px 15px;
+    display:flex;
+    flex-direction:column;
+}
+
+.sidebar img{
+    height:35px;
+    display:block;
+    margin:0 auto 20px;
+}
+
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.menu button{
+    background:#1e1e1e;
+    color:#fff;
+    border:none;
+    padding:12px;
+    border-radius:14px;
+    cursor:pointer;
+    text-align:left;
+}
+
+.menu button.active{
+    background:#ff9f43;
+    color:#000;
+    font-weight:600;
+}
+
+/* TEAM STATUS */
+.team-box{
+    margin-top:25px;
+    background:#111;
+    border-radius:14px;
+    padding:12px;
+    max-height:260px;
+    overflow:auto;
+}
+
+.team-box h4{
+    font-size:14px;
+    margin-bottom:8px;
+}
+
+.team-user{
+    font-size:13px;
+    margin-bottom:6px;
+}
+
+/* MAIN */
+.main{
+    flex:1;
+    padding:30px;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.header-right button{
+    background:#333;
+    color:#fff;
+    border:none;
+    padding:8px 18px;
+    border-radius:20px;
+    cursor:pointer;
+    margin-left:8px;
+}
+
+/* CARD */
+.card{
+    background:#1e1e1e;
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:25px;
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+/* PROFILE */
+.profile{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.avatar{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#ff9f43;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    font-weight:700;
+    color:#000;
+}
+
+/* BUTTONS */
+button.action{
+    padding:10px 18px;
+    border:none;
+    border-radius:22px;
+    background:#ff9f43;
+    font-weight:600;
+    cursor:pointer;
+    color:#000;
+    margin-right:10px;
+}
+
+select{
+    padding:12px 16px;
+    border-radius:14px;
+    border:none;
+    margin-bottom:15px;
+}
+
+.green{ color:#7CFC98; font-weight:700; }
+.red{ color:#ff8a8a; font-weight:700; }
+
+.timer{
+    font-size:20px;
+    font-weight:700;
+    margin-top:10px;
+}
+
+.section{ display:none; }
+.section.active{ display:block; }
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <img src="./322343.png">
+
+    <div class="menu">
+        <button class="active" onclick="showSection('dashboard',this)">🏠 Dashboard</button>
+        <button onclick="showSection('profile',this)">👤 Profile</button>
+        <button onclick="showSection('breaks',this)">⏱ Breaks</button>
+    </div>
+
+    <!-- ADDED TEAM STATUS -->
+    <div class="team-box">
+        <h4>👥 Team Status</h4>
+
+        <select onchange="renderTeamStatus(this.value)">
+            <option value="work">Working First</option>
+            <option value="break">On Break First</option>
+        </select>
+
+        <div id="teamStatus"></div>
+    </div>
+</div>
+
+<div class="main">
+
+    <div class="header">
+        <h2>User Dashboard</h2>
+        <div class="header-right">
+            <!-- ADDED LOGOUT -->
+            <button onclick="logout()">🚪 Logout</button>
+            <button onclick="location.href='login.html'">← Back</button>
+        </div>
+    </div>
+
+    <div class="section active" id="dashboard">
+
+        <div class="card profile">
+            <div class="avatar" id="avatar"></div>
+            <div>
+                <h3 id="profileName"></h3>
+                <p id="dashboardStatus"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Daily Activity Summary</h3>
+            <p id="stats"></p>
+            <p id="totalBreak"></p>
+            <p id="dashboardTimer" class="timer"></p>
+        </div>
+
+        <div class="card">
+            <h3>Break Management</h3>
+
+            <select id="breakType">
+                <option value="Regular">Regular Break (15 mins)</option>
+                <option value="Lunch">Lunch Break (1–3 PM)</option>
+            </select><br>
+
+            <button class="action" onclick="startBreak()">Break In</button>
+            <button class="action" onclick="endBreak()">Break Out</button>
+
+            <p id="breakStatus"></p>
+        </div>
+
+    </div>
+
+    <div class="section" id="profile">
+        <div class="card profile">
+            <div class="avatar" id="avatar2"></div>
+            <div>
+                <h3 id="profileName2"></h3>
+                <p id="profileStatus2"></p>
+                <p><b>Role:</b> User</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="breaks">
+        <div class="card">
+            <h3>Break Control</h3>
+            <p id="breakStatus2"></p>
+            <p id="breakTimer2" class="timer"></p>
+
+            <button class="action" onclick="startBreak()">Break In</button>
+            <button class="action" onclick="endBreak()">Break Out</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+if(localStorage.getItem("role")!=="user"){
+    location.href="login.html";
+}
+
+let users = JSON.parse(localStorage.getItem("users")) || [];
+let breakLogs = JSON.parse(localStorage.getItem("breakLogs")) || [];
+let adminAlerts = JSON.parse(localStorage.getItem("adminAlerts")) || [];
+let currentUser = localStorage.getItem("currentUser");
+let timerInterval;
+
+/* ADDED LOGOUT FUNCTION */
+function logout(){
+    localStorage.removeItem("currentUser");
+    localStorage.removeItem("role");
+    location.href="login.html";
+}
+
+/* ADDED TEAM STATUS FUNCTION */
+function renderTeamStatus(sortBy="work"){
+    let list=[...users];
+
+    list.sort((a,b)=>{
+        if(sortBy==="break"){
+            return (b.breakType?1:0)-(a.breakType?1:0);
+        }else{
+            return (a.breakType?1:0)-(b.breakType?1:0);
+        }
+    });
+
+    teamStatus.innerHTML="";
+    list.forEach(u=>{
+        teamStatus.innerHTML+=`
+            <div class="team-user">
+                ${u.username} :
+                ${u.breakType
+                    ? `<span class="red">${u.breakType}</span>`
+                    : `<span class="green">Working</span>`}
+            </div>
+        `;
+    });
+}
+
+/* ===== EXISTING CODE (UNCHANGED) ===== */
+
+function showSection(id,btn){
+    document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+
+    document.querySelectorAll(".menu button").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+}
+
+function updateUI(){
+    users = JSON.parse(localStorage.getItem("users")) || [];
+    let me = users.find(u=>u.username===currentUser);
+    if(!me) return;
+
+    let online=0,onBreak=0;
+    users.forEach(u=>{
+        if(u.status==="ONLINE") online++;
+        if(u.breakType) onBreak++;
+    });
+
+    avatar.innerText = avatar2.innerText = currentUser[0].toUpperCase();
+    profileName.innerText = profileName2.innerText = currentUser;
+
+    dashboardStatus.innerHTML = profileStatus2.innerHTML =
+        me.breakType
+        ? `<span class="red">On ${me.breakType} Break</span>`
+        : `<span class="green">Working</span>`;
+
+    stats.innerHTML = `Online: <b>${online}</b> | On Break: <b>${onBreak}</b>`;
+    totalBreak.innerHTML =
+        `Total Break Today: <b>${Math.floor(me.totalBreak||0)} mins</b>`;
+
+    breakStatus.innerHTML = breakStatus2.innerHTML =
+        me.breakType
+        ? `<span class="red">You are on ${me.breakType} Break</span>`
+        : `<span class="green">You are Working</span>`;
+
+    /* SAFE ADD */
+    renderTeamStatus();
+}
+
+function startBreak(){
+    if(breakLogs.some(b=>b.user===currentUser && b.status==="ACTIVE")){
+        alert("You already have an active break");
+        return;
+    }
+
+    const hour = new Date().getHours();
+    if(breakType.value==="Lunch" && (hour<13 || hour>=15)){
+        alert("Lunch allowed only between 1 PM and 3 PM");
+        return;
+    }
+
+    users.forEach(u=>{
+        if(u.username===currentUser){
+            u.status="NOT ACTIVE";
+            u.breakType=breakType.value;
+            u.breakStart=Date.now();
+        }
+    });
+
+    breakLogs.push({
+        user:currentUser,
+        type:breakType.value,
+        start:new Date().toLocaleString(),
+        end:"",
+        status:"ACTIVE"
+    });
+
+    startTimer();
+    saveAll();
+}
+
+function endBreak(){
+    users.forEach(u=>{
+        if(u.username===currentUser){
+            u.status="ONLINE";
+            u.breakType=null;
+            u.breakStart=null;
+        }
+    });
+
+    for(let i=breakLogs.length-1;i>=0;i--){
+        if(breakLogs[i].user===currentUser && breakLogs[i].status==="ACTIVE"){
+            breakLogs[i].end=new Date().toLocaleString();
+            breakLogs[i].status="ENDED";
+            break;
+        }
+    }
+
+    clearInterval(timerInterval);
+    dashboardTimer.innerText = breakTimer2.innerText = "";
+    saveAll();
+}
+
+function startTimer(){
+    clearInterval(timerInterval);
+
+    timerInterval=setInterval(()=>{
+        let me = users.find(u=>u.username===currentUser);
+        if(!me.breakStart) return;
+
+        let diff=Math.floor((Date.now()-me.breakStart)/1000);
+        let m=Math.floor(diff/60);
+        let s=diff%60;
+
+        let limit = me.breakType==="Lunch"?60:15;
+
+        let text = `${me.breakType} Break: ${m}:${s.toString().padStart(2,"0")}`;
+        dashboardTimer.innerText = breakTimer2.innerText = text;
+
+        if(m>=limit && !me.lunchExceeded){
+            alert(`⚠ ${me.breakType} break exceeded`);
+            if(me.breakType==="Lunch"){
+                adminAlerts.push(`🚨 ${currentUser} exceeded lunch break`);
+                localStorage.setItem("adminAlerts",JSON.stringify(adminAlerts));
+            }
+            me.lunchExceeded=true;
+        }
+        saveAll();
+    },1000);
+}
+
+function saveAll(){
+    localStorage.setItem("users",JSON.stringify(users));
+    localStorage.setItem("breakLogs",JSON.stringify(breakLogs));
+    updateUI();
+}
+
+setInterval(updateUI,2000);
+updateUI();
+</script>
+
+</body>
+</html>

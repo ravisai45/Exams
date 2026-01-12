@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Oppty Break System - Login</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#000;
+}
+
+/* MAIN CONTAINER */
+.login-wrapper{
+    width:900px;
+    height:460px;
+    background:#1a1a1a;
+    border-radius:28px;
+    display:flex;
+    overflow:hidden;
+    box-shadow:0 40px 80px rgba(0,0,0,0.7);
+}
+
+/* LEFT PANEL */
+.left{
+    width:45%;
+    background:#ffa64d;
+    padding:40px 35px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.logo img{
+    max-width:180px;      /* 🔑 PREVENT STRETCH */
+    height:auto;
+    object-fit:contain;
+    display:block;
+}
+
+.left h2{
+    color:#000;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.left p{
+    color:#222;
+    line-height:1.6;
+    font-size:15px;
+}
+
+/* RIGHT PANEL */
+.right{
+    width:55%;
+    background:#1f1f1f;
+    padding:50px 45px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.right h3{
+    margin-bottom:22px;
+    font-weight:500;
+}
+
+/* ROLE TABS */
+.tabs{
+    display:flex;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.tab{
+    flex:1;
+    padding:12px;
+    border-radius:25px;
+    background:#333;
+    text-align:center;
+    cursor:pointer;
+}
+
+.tab.active{
+    background:#ffa64d;
+    color:#000;
+    font-weight:600;
+}
+
+/* INPUTS */
+input{
+    width:100%;
+    padding:14px;
+    border-radius:14px;
+    border:none;
+    margin-bottom:14px;
+    font-size:14px;
+}
+
+/* BUTTON */
+button{
+    padding:14px;
+    border-radius:25px;
+    border:none;
+    background:#ffa64d;
+    font-weight:600;
+    cursor:pointer;
+    margin-top:8px;
+}
+
+#error{
+    margin-top:12px;
+    color:#ff8a8a;
+    font-size:14px;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-wrapper">
+
+   
+    <div class="left">
+        <div class="logo">
+            <img src="./322343.png" alt="Oppty Logo">
+        </div>
+
+        <h2>Oppty Break System</h2>
+        <p>
+            Smart workforce break monitoring system designed to ensure
+            productivity, transparency, and discipline across teams.
+        </p>
+    </div>
+
+    <div class="right">
+        <h3>Sign in to continue</h3>
+
+        <div class="tabs">
+            <div class="tab active" id="adminTab" onclick="setRole('admin')">🛡 Admin</div>
+            <div class="tab" id="userTab" onclick="setRole('user')">👤 User</div>
+        </div>
+
+        <input id="username" placeholder="Email / Username">
+        <input id="password" type="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+        <div id="error"></div>
+    </div>
+
+</div>
+
+<script>
+let selectedRole = "admin";
+
+function setRole(role){
+    selectedRole = role;
+    adminTab.classList.remove("active");
+    userTab.classList.remove("active");
+
+    role === "admin"
+        ? adminTab.classList.add("active")
+        : userTab.classList.add("active");
+}
+
+function login(){
+    const uname = username.value.trim();
+    const pass  = password.value.trim();
+    error.innerText = "";
+
+    if(selectedRole === "admin"){
+        if(uname === "admin@oppty.in" && pass === "oppty@1234"){
+            localStorage.setItem("role","admin");
+            location.href = "admin.html";
+        }else{
+            error.innerText = "Invalid Admin credentials";
+        }
+        return;
+    }
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const user = users.find(u => u.username === uname && u.password === pass);
+
+    if(user){
+        localStorage.setItem("role","user");
+        localStorage.setItem("currentUser", uname);
+        location.href = "user.html";
+    }else{
+        error.innerText = "Invalid User credentials";
+    }
+}
+</script>
+
+</body>
+</html>
