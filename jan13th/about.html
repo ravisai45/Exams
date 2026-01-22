@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Us | Oppty Tech Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="about.css">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+
+<header class="bento-header" id="mainHeader">
+    <!-- 1. LOGO -->
+    <a href="index.html" class="logo-pill">
+        <img src="./322343.png" alt="Oppty Logo">
+    </a>
+
+    <!-- 2. CTA GROUP (Middle onwards) -->
+    <div class="cta-group">
+        <a href="academy.html" class="btn-premium btn-academy">Academy</a>
+        <a href="https://www.theprocareer.com/home" class="btn-premium btn-partner">Partner ↗</a>
+    </div>
+
+    <!-- 3. CALL ICON -->
+    <a href="tel:+919491209900" class="call-btn" title="Call Us">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <!-- 4. MENU TOGGLE -->
+    <button class="menu-toggle" id="menuToggle">
+        <span>MENU</span>
+        <i class="fa-solid fa-bars-staggered"></i>
+    </button>
+
+
+<!-- Overlay for side nav -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- Side Navigation Panel -->
+<div class="side-nav" id="sideNav">
+    <button class="close-nav" id="closeNav">&times;</button>
+    
+    <a href="index1.html" class="side-link">Home</a>
+    <a href="about.html" class="side-link">About Us</a>
+    
+    <div class="side-link">
+    <a href="services.html"class="side-link">Our Services</a>
+    <i class="fa-solid fa-chevron-down" id="servicesToggle"></i>
+
+
+        <div class="side-dropdown" id="servicesDropdown">
+           
+            <a href="solution.html" class="dropdown-item" style="color: var(--primary); font-weight: 600;">Solutions</a>
+        </div>
+    </div>
+    <a href="contact.html" class="side-link">Contact</a>
+    <a href="career.html" class="side-link">Career</a>
+</div>
+</header>
+
+
+
+    <section class="creative-hero" id="hero">
+        <!-- Background Engine -->
+        <div class="hero-video-portal">
+            <video autoplay muted loop playsinline class="portal-video" id="heroVideo">
+                <!-- Replace with your video URL -->
+                <source src="./video-about.mp4" type="video/mp4">
+            </video>
+            <div class="liquid-overlay"></div>
+        </div>
+
+        <!-- Animated Orbits -->
+        <div class="orbit-ring ring-1"></div>
+        <div class="orbit-ring ring-2"></div>
+
+        <div class="hero-core">
+            <!-- Kinetic Background Text -->
+            <div class="kinetic-text" id="kineticText">OPPTY</div>
+
+            <div class="hero-layout">
+                <!-- Content Section -->
+                <div class="content-pod">
+                    <div class="status-pill">
+                        <span class="pulse-dot"></span>
+                        Next-Gen Intelligence
+                    </div>
+                    <h1>Empowering <br>Digital Frontiers</h1>
+                    <p>
+                        Oppty Tech Hub delivers enterprise-grade software, AI automation, and secure digital infrastructure designed for the next era of business.
+                    </p>
+                    
+                    <div class="action-orbit">
+                        <a href="#" class="btn-glow">Explore Hub</a>
+                        <a href="#" class="btn-glass">Our Mission</a>
+                    </div>
+                </div>
+
+                <!-- Interactive Pods -->
+                <div class="feature-cluster">
+                    <div class="glass-pod p1" data-speed="2">
+                        <div class="pod-icon">AI</div>
+                        <span>Neural Automation</span>
+                    </div>
+                    <div class="glass-pod p2" data-speed="-1">
+                        <div class="pod-icon">SEC</div>
+                        <span>Enterprise Guard</span>
+                    </div>
+                    <div class="glass-pod p3" data-speed="1.5">
+                        <div class="pod-icon">CLD</div>
+                        <span>Hybrid Cloud</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-floor"></div>
+    </section>
+
+
+
+    
+<!-- ================= TRUST WALL ================= -->
+<section class="trust-wall">
+
+  <div class="trust-header">
+    <h4>Trusted By</h4>
+    <h2>Companies That <span>Believe</span> in Us</h2>
+    <p>
+      Startups, enterprises, and growing brands trust Oppty Tech Hub
+      to deliver secure, scalable, and future-ready digital solutions.
+    </p>
+  </div>
+
+  <!-- LOGO TRACK -->
+  <div class="logo-slider">
+    <div class="logo-track">
+      <!-- LOGOS (duplicate for seamless loop) -->
+      <div class="logo-item">CLIENT LOGO</div>
+      <div class="logo-item">STARTUP</div>
+      <div class="logo-item">ENTERPRISE</div>
+      <div class="logo-item">EDTECH</div>
+      <div class="logo-item">FINTECH</div>
+      <div class="logo-item">ECOMMERCE</div>
+
+      <div class="logo-item">CLIENT LOGO</div>
+      <div class="logo-item">STARTUP</div>
+      <div class="logo-item">ENTERPRISE</div>
+      <div class="logo-item">EDTECH</div>
+      <div class="logo-item">FINTECH</div>
+      <div class="logo-item">ECOMMERCE</div>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+<!-- ================= MISSION / VISION / VALUES ================= -->
+<section class="about-mvv">
+  <h2 class="reveal-fade">Our Mission, Vision & Values</h2>
+
+  <div class="mvv-grid">
+    <div class="mvv-card reveal-flip">
+      <img src="./download1.jfif">
+      <h3>Our Mission</h3>
+      <p>
+        To empower organizations with secure, scalable and intelligent
+        technology solutions that accelerate growth.
+      </p>
+    </div>
+
+    <div class="mvv-card reveal-flip">
+      <img src="./download 2.jfif">
+      <h3>Our Vision</h3>
+      <p>
+        To become a globally trusted digital transformation partner
+        driven by innovation and excellence.
+      </p>
+    </div>
+
+    <div class="mvv-card reveal-flip">
+      <img src="./download 4.jfif">
+      <h3>Our Values</h3>
+      <p>
+        Integrity, innovation, customer focus, continuous learning,
+        and long-term partnerships.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <section class="bento-container">
+        <!-- Section Header -->
+        <div class="mb-20 reveal-on-scroll">
+            <span class="text-[#bef264] font-bold tracking-[0.3em] uppercase text-xs block mb-4">Innovation & Growth</span>
+            <div class="flex flex-col md:flex-row justify-between items-baseline gap-6">
+                <h2 class="text-6xl md:text-8xl font-extrabold tracking-tighter">OPPTY TECH <span class="text-[#bef264]">HUB.</span></h2>
+                <p class="text-gray-400 text-lg max-w-md font-light leading-relaxed">
+                    A premier technological ecosystem designed to foster scalable software solutions and high-performance digital ecosystems.
+                </p>
+            </div>
+        </div>
+
+        <!-- Bento Grid -->
+        <div class="bento-grid">
+            
+            <!-- Service 1: Software Engineering -->
+            <div class="card-base bento-item-large reveal-on-scroll" style="transition-delay: 0.1s">
+                <div class="float-content">
+                    <div class="tag">Flagship</div>
+                    <h3 class="text-5xl font-extrabold mb-6 leading-none">Software<br>Engineering</h3>
+                    <p class="text-gray-500 text-lg leading-relaxed mb-8 max-w-sm">
+                        Building robust, enterprise-grade applications with a focus on clean code, scalability, and seamless user experiences.Software engineering matters because it's the systematic discipline of designing, developing, testing, and maintaining reliable, efficient, and scalable software systems that solve real-world problems, moving beyond simple coding to apply engineering principles for quality, cost-effectiveness, and maintainability in large-scale projects. It ensures software is built to high standards, meeting user needs, managing complexity, and adapting to new technologies, making digital tools dependable for everything from apps to operating systems. 
+                    </p>
+                </div>
+                <div class="flex items-center gap-3 text-[#bef264] font-black italic cursor-pointer">
+                    EXPLORE OUR STACK <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                </div>
+            </div>
+
+            <!-- Service 2: AI & Data -->
+            <div class="card-base bento-item-small reveal-on-scroll" style="transition-delay: 0.2s">
+                <div class="float-content">
+                    <div class="w-12 h-12 mb-6 border-2 border-[#bef264] rounded-xl flex items-center justify-center text-[#bef264]">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h4 class="text-xl font-bold">AI & Data Analytics</h4>
+                    <p>AI and data analytics matter because they have transformed from optional business tools into the essential backbone of modern decision-making.</p>
+                </div>
+            </div>
+
+            <!-- Service 3: Cloud -->
+            <div class="card-base bento-item-small reveal-on-scroll" style="transition-delay: 0.3s">
+                <div class="float-content">
+                    <div class="w-12 h-12 mb-6 border-2 border-[#bef264] rounded-xl flex items-center justify-center text-[#bef264]">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h4 class="text-xl font-bold">Cloud Infrastructure</h4>
+                    <p>Cloud infrastructure is the essential hardware (servers, storage, networking) and software (virtualization, management) that powers cloud computing.</p>
+                </div>
+            </div>
+
+            <!-- Service 4: Hub Community -->
+            <div class="card-base bento-item-medium reveal-on-scroll group" style="transition-delay: 0.4s">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-10 float-content">
+                    <div>
+                        <h3 class="text-4xl font-extrabold mb-2">Innovation Hub</h3>
+                        <p class="text-gray-500">Connecting global tech talent with local opportunities.An Innovation Hub is a space or program fostering new ideas, often focusing on tech and creativity, but "MATTER Innovation Hub" specifically refers to a global initiative by MATTER.ngo and Jamf</p>
+                    </div>
+                    <div class="text-7xl font-black text-[#1a1a1a] group-hover:text-[#bef264] transition-colors duration-500">
+                        HUB
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+<!-- ================= SERVICES ================= -->
+<section class="about-services">
+  <div class="services-wrap">
+
+    <div class="services-image reveal-slide-right">
+      <img src="./carousel-2.jpg">
+    </div>
+
+    <div class="services-text reveal-stagger">
+      <h2>What We Do</h2>
+      <p>
+        Oppty Tech Hub delivers end-to-end digital services that modernize
+        operations and strengthen business performance.
+      </p>
+
+      <ul class="service-list">
+        <li>Custom Web & App Development</li>
+        <li>Cloud Computing & DevOps</li>
+        <li>AI, ML & Data Analytics</li>
+        <li>Cyber Security Solutions</li>
+        <li>Enterprise IT Consulting</li>
+        <li>Professional Skill Development</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section class="review-v2">
+  <div class="review-bg-lines"></div>
+
+  <div class="review-header">
+    <span class="badge">Client Says</span>
+    <h2>Review & Ratings</h2>
+  </div>
+
+  <div class="review-card">
+    <div class="rating-stars">★★★★★</div>
+
+    <p class="review-message" id="msg">
+      Oppty's innovative solutions transformed our business!
+    </p>
+
+    <div class="review-user">
+      <div class="avatar-ring">
+        <span>AM</span>
+      </div>
+      <div>
+        <h4 id="name">Arjun Mehta</h4>
+        <small id="role">E-Commerce Entrepreneur</small>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <span class="step active"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="partners-v2">
+  <div class="partners-header">
+    <span>Partnership</span>
+    <h2>Our Client <strong>Partners</strong></h2>
+  </div>
+
+  <div class="partners-grid">
+    
+    <div class="partner-card">
+      <div class="img-box">
+        <img src="./Screenshot-1.png" alt="">
+      </div>
+      <h4>Aarav Sharma</h4>
+    </div>
+
+    <div class="partner-card">
+      <div class="img-box">
+        <img src="./Screenshot-2.png" alt="">
+      </div>
+      <h4>Arjun Singh</h4>
+    </div>
+
+    <div class="partner-card">
+      <div class="img-box">
+        <img src="./Screenshot-3.png" alt="">
+      </div>
+      <h4>Ishaan Verma</h4>
+    </div>
+
+    <div class="partner-card">
+      <div class="img-box">
+        <img src="./Screenshot-4.png" alt="">
+      </div>
+      <h4>Kabir Patil</h4>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- ================= WHY OPPTY ================= -->
+<section class="about-why reveal-slide-up">
+  <div class="why-wrap">
+
+    <div class="why-text">
+      <h2>Why Choose Oppty Tech Hub?</h2>
+      <p>
+        We blend technology expertise with strategic thinking to deliver
+        measurable and sustainable business outcomes.
+      </p>
+
+      <div class="why-grid">
+        <div class="why-box">Enterprise-Grade Solutions</div>
+        <div class="why-box">Highly Skilled Teams</div>
+        <div class="why-box">Security-First Architecture</div>
+        <div class="why-box">Agile & Scalable Delivery</div>
+        <div class="why-box">Industry Expertise</div>
+        <div class="why-box">Long-Term Partnerships</div>
+      </div>
+    </div>
+
+    <div class="why-image reveal-pop">
+      <img src="./instagram-image-additional.jpg">
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<footer class="oppty-footer">
+    <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+            <img src="./322343.png" alt="Oppty Logo" class="logo">
+            <p>Elevating businesses through innovative technology solutions. From cloud architecture to secure web platforms, we build the future of digital enterprises.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+
+        <!-- Solutions Column -->
+        <div class="footer-col">
+            <h4 class="footer-h4">Our Expertise</h4>
+            <ul class="footer-links">
+                <li><a href="#">Web Engineering</a></li>
+                <li><a href="#">Mobile Ecosystems</a></li>
+                <li><a href="#">Cloud Migration</a></li>
+                <li><a href="#">Cyber Defense</a></li>
+                <li><a href="#">Digital Strategy</a></li>
+            </ul>
+        </div>
+
+        <!-- Company Column -->
+        <div class="footer-col">
+            <h4 class="footer-h4">Explore</h4>
+            <ul class="footer-links">
+                <li><a href="#">About Journey</a></li>
+                <li><a href="#">Success Stories</a></li>
+                <li><a href="#">Career Portal</a></li>
+                <li><a href="#">Partner Program</a></li>
+                <li><a href="#">Tech Blog</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Card Column -->
+        <div class="footer-col">
+            <div class="footer-contact-card">
+                <h4 class="footer-h4" style="margin-bottom: 25px;">Get in Touch</h4>
+                
+                <div class="contact-item">
+                    <i class="fas fa-location-dot"></i>
+                    <div class="contact-info">
+                        <h5>Hyderabad HQ</h5>
+                        <p>108/43, Vijaya Lakshmi Enclave, Gangaram, Hyderabad - 500050</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-info">
+                        <h5>Email Us</h5>
+                        <p>connect@opptytech.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item" style="margin-bottom: 0;">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-info">
+                        <h5>Call Support</h5>
+                        <p>+91 94912 09900</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <div class="copyright">
+            &copy; 2025 Oppty Tech Hub. All rights reserved. Built for the future.
+        </div>
+        
+    </div>
+</footer>
+
+
+</section>
+<script src="about.js"></script>
+</body>
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Services | Oppty Tech Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="services.css">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+
+
+
+<header class="bento-header" id="mainHeader">
+    <!-- 1. LOGO -->
+    <a href="index.html" class="logo-pill">
+        <img src="./322343.png" alt="Oppty Logo">
+    </a>
+
+    <!-- 2. CTA GROUP (Middle onwards) -->
+    <div class="cta-group">
+        <a href="academy.html" class="btn-premium btn-academy">Academy</a>
+        <a href="https://www.theprocareer.com/home" class="btn-premium btn-partner">Partner ↗</a>
+    </div>
+
+    <!-- 3. CALL ICON -->
+    <a href="tel:+919491209900" class="call-btn" title="Call Us">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <!-- 4. MENU TOGGLE -->
+    <button class="menu-toggle" id="menuToggle">
+        <span>MENU</span>
+        <i class="fa-solid fa-bars-staggered"></i>
+    </button>
+
+
+<!-- Overlay for side nav -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- Side Navigation Panel -->
+<div class="side-nav" id="sideNav">
+    <button class="close-nav" id="closeNav">&times;</button>
+    
+    <a href="index1.html" class="side-link">Home</a>
+    <a href="about.html" class="side-link">About Us</a>
+    
+    <div class="side-link">
+    <a href="services.html"class="side-link">Our Services</a>
+    <i class="fa-solid fa-chevron-down" id="servicesToggle"></i>
+
+
+        <div class="side-dropdown" id="servicesDropdown">
+           
+            <a href="solution.html" class="dropdown-item" style="color: var(--primary); font-weight: 600;">Solutions</a>
+        </div>
+    </div>
+    <a href="contact.html" class="side-link">Contact</a>
+    <a href="career.html" class="side-link">Career</a>
+</div>
+</header>
+
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero">
+  <!-- Animated Background -->
+  <div class="hero-bg">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="hero-container">
+    <!-- LEFT CONTENT -->
+    <div class="hero-content">
+      <h1 id="heroTitle">Empowering Digital Innovation</h1>
+      <p id="heroDesc">
+        We build smart, scalable, and secure digital solutions for modern businesses.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="services.html" class="btn-primary">Our Services</a>
+        <a href="contact.html" class="btn-outline">Get in Touch</a>
+      </div>
+    </div>
+
+    <!-- RIGHT MEDIA -->
+    <div class="hero-media">
+      <video id="heroVideo" autoplay muted loop playsinline>
+        <source src="assets/hero1.mp4" type="video/mp4">
+      </video>
+      <img id="heroImage" src="./Hai-insta-img-05.jpg" alt="Oppty Tech Hub" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= SERVICES SECTION ================= -->
+<section class="services-section">
+  <div class="services-header">
+    <h4>Services</h4>
+    <h2>Solution We <span>Provide</span></h2>
+    <p>
+      Unlock your business potential with our innovative, SEO-optimized solutions designed for success.
+    </p>
+  </div>
+
+  <div class="services-wrapper">
+    <!-- LEFT INDEX -->
+    <div class="services-list">
+      <div class="service-item active" data-index="0">01 <span>IT Services</span></div>
+      <div class="service-item" data-index="1">02 <span>BPO</span></div>
+      <div class="service-item" data-index="2">03 <span>E-commerce</span></div>
+      <div class="service-item" data-index="3">04 <span>Web Development</span></div>
+      <div class="service-item" data-index="4">05 <span>AI Solutions</span></div>
+    </div>
+
+    <!-- CENTER LINE -->
+    <div class="services-line">
+      <span class="line-glow"></span>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="services-content">
+      <div class="service-card" id="serviceCard">
+        <h3 id="serviceTitle">IT Services</h3>
+        <p id="serviceDesc">
+          Boost your business with a robust IT infrastructure tailored for scalability and performance.
+        </p>
+        <a href="contact.html" class="service-btn">Explore Service</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ================= WHY OPPTY TECH HUB ================= -->
+<section class="oppty-advantages">
+  <div class="adv-header">
+    <h4>Why Oppty Tech Hub</h4>
+    <h2>Driven by <span>Innovation</span> & Excellence</h2>
+    <p>
+      We combine technology, strategy, and creativity to deliver impactful digital solutions
+      that help businesses scale faster and smarter.
+    </p>
+  </div>
+
+  <div class="adv-grid">
+    <!-- CARD 1 -->
+    <div class="adv-card">
+      <div class="card-icon">⚙️</div>
+      <h3>Enterprise-Grade Solutions</h3>
+      <p>
+        We design scalable and secure systems tailored for startups, SMEs, and enterprises,
+        ensuring performance, stability, and long-term growth.
+      </p>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="adv-card">
+      <div class="card-icon">🔐</div>
+      <h3>Security-First Approach</h3>
+      <p>
+        Our cybersecurity-driven architecture protects your data, applications,
+        and infrastructure with industry best practices and compliance standards.
+      </p>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="adv-card">
+      <div class="card-icon">🚀</div>
+      <h3>Future-Ready Technology</h3>
+      <p>
+        From AI automation to cloud-native platforms, we use cutting-edge tools
+        to keep your business ahead of the competition.
+      </p>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="adv-card">
+      <div class="card-icon">🤝</div>
+      <h3>Client-Centric Execution</h3>
+      <p>
+        We collaborate closely with clients to understand goals, deliver transparency,
+        and ensure solutions align perfectly with business objectives.
+      </p>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="adv-card">
+      <div class="card-icon">📈</div>
+      <h3>Growth-Focused Strategy</h3>
+      <p>
+        Every solution we build is optimized for SEO, performance, and scalability,
+        helping brands attract users and maximize ROI.
+      </p>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="adv-card">
+      <div class="card-icon">🛠️</div>
+      <h3>24/7 Technical Support</h3>
+      <p>
+        Our dedicated support team ensures smooth operations, minimal downtime,
+        and rapid issue resolution around the clock.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ================= PROCESS TIMELINE ================= -->
+<section class="process-section">
+  <div class="process-header">
+    <h4>Our Process</h4>
+    <h2>How Oppty Tech Hub <span>Delivers Success</span></h2>
+    <p>
+      A structured, transparent, and innovation-driven approach that transforms ideas
+      into scalable digital solutions.
+    </p>
+  </div>
+
+  <div class="timeline">
+    <!-- STEP 1 -->
+    <div class="timeline-step left">
+      <div class="step-content">
+        <span class="step-number">01</span>
+        <h3>Discovery & Strategy</h3>
+        <p>
+          We analyze your business goals, technical requirements, and market landscape
+          to build a solid digital roadmap aligned with your vision.
+        </p>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="timeline-step right">
+      <div class="step-content">
+        <span class="step-number">02</span>
+        <h3>Solution Architecture</h3>
+        <p>
+          Our experts design scalable system architectures with security, performance,
+          and future growth in mind using modern technologies.
+        </p>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="timeline-step left">
+      <div class="step-content">
+        <span class="step-number">03</span>
+        <h3>Design & Development</h3>
+        <p>
+          We craft intuitive user experiences and develop robust solutions using clean,
+          maintainable, and performance-optimized code.
+        </p>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="timeline-step right">
+      <div class="step-content">
+        <span class="step-number">04</span>
+        <h3>Testing & Optimization</h3>
+        <p>
+          Rigorous testing ensures security, speed, and reliability while performance
+          optimizations deliver a seamless user experience.
+        </p>
+      </div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="timeline-step left">
+      <div class="step-content">
+        <span class="step-number">05</span>
+        <h3>Launch & Support</h3>
+        <p>
+          We deploy your solution smoothly and provide continuous monitoring,
+          updates, and 24/7 technical support for long-term success.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ================= INDUSTRIES SECTION ================= -->
+<section class="industries-section">
+  <div class="industries-header">
+    <h4>Industries</h4>
+    <h2>Industries We <span>Serve</span></h2>
+    <p>
+      We deliver tailored digital solutions across diverse industries,
+      empowering organizations with scalable, secure, and future-ready technology.
+    </p>
+  </div>
+
+  <div class="industries-grid">
+    <!-- CARD 1 -->
+    <article class="industry-card reveal">
+      <div class="img-wrap">
+        <img src="./it.jpg" alt="IT & Technology">
+      </div>
+      <div class="glass">
+        <h3>IT & Technology</h3>
+        <p>
+          Scalable IT infrastructure, cybersecurity, cloud solutions,
+          and enterprise software designed for performance and growth.
+        </p>
+      </div>
+    </article>
+
+    <!-- CARD 2 -->
+    <article class="industry-card reveal">
+      <div class="img-wrap">
+        <img src="./ecom.jpg" alt="E-commerce & Retail">
+      </div>
+      <div class="glass">
+        <h3>E-commerce & Retail</h3>
+        <p>
+          Conversion-focused platforms, secure payments, SEO optimization,
+          and seamless user experiences that drive online sales.
+        </p>
+      </div>
+    </article>
+
+    <!-- CARD 3 -->
+    <article class="industry-card reveal">
+      <div class="img-wrap">
+        <img src="./healthcare.jpg" alt="Healthcare & Life Sciences">
+      </div>
+      <div class="glass">
+        <h3>Healthcare</h3>
+        <p>
+          Secure, compliant systems for data management, automation,
+          and patient-centric digital experiences.
+        </p>
+      </div>
+    </article>
+
+    <!-- CARD 4 -->
+    <article class="industry-card reveal">
+      <div class="img-wrap">
+        <img src="./edtech.jpg" alt="Education & EdTech">
+      </div>
+      <div class="glass">
+        <h3>Education & EdTech</h3>
+        <p>
+          Learning platforms, virtual classrooms, analytics,
+          and automation that enhance digital education delivery.
+        </p>
+      </div>
+    </article>
+
+    <!-- CARD 5 -->
+    <article class="industry-card reveal">
+      <div class="img-wrap">
+        <img src="./fin.jpg" alt="Finance & FinTech">
+      </div>
+      <div class="glass">
+        <h3>Finance & FinTech</h3>
+        <p>
+          High-security financial platforms, data-driven insights,
+          and automation for accuracy and compliance.
+        </p>
+      </div>
+    </article>
+
+    <!-- CARD 6 -->
+    <article class="industry-card reveal">
+      <div class="img-wrap">
+        <img src="./startup.jpg" alt="Startups & Enterprises">
+      </div>
+      <div class="glass">
+        <h3>Startups & Enterprises</h3>
+        <p>
+          Agile solutions, MVP development, AI-driven tools,
+          and scalable architectures for rapid growth.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+
+<!-- ================= ORBIT SERVICES SECTION ================= -->
+<section class="orbit-services">
+  <div class="orbit-header">
+    <h4>Our Services</h4>
+    <h2>Technology That <span>Orbits Around Your Business</span></h2>
+    <p>
+      At Oppty Tech Hub, every service revolves around one goal —
+      accelerating your digital growth with precision and innovation.
+    </p>
+  </div>
+
+  <div class="orbit-wrapper">
+    <!-- CENTER -->
+    <div class="orbit-center">
+      <h3>Oppty<br>Tech Hub</h3>
+      <span>Innovation Core</span>
+    </div>
+
+    <!-- ORBIT RING -->
+    <div class="orbit-ring">
+      <div class="orbit-card">
+        <h4>IT Services</h4>
+        <p>Scalable infrastructure, cybersecurity & 24/7 support.</p>
+      </div>
+
+      <!-- <div class="orbit-card">
+        <h4>BPO Solutions</h4>
+        <p>Smart outsourcing to reduce cost & boost efficiency.</p>
+      </div> -->
+
+      <div class="orbit-card">
+        <h4>E-Commerce</h4>
+        <p>High-conversion online stores with secure payments.</p>
+      </div>
+
+      <div class="orbit-card">
+        <h4>Web Development</h4>
+        <p>Responsive, SEO-optimized & secure web platforms.</p>
+      </div>
+
+      <div class="orbit-card">
+        <h4>AI Solutions</h4>
+        <p>Automation, analytics & intelligent business insights.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ================= STATS SECTION ================= -->
+<section class="stats-section">
+  <div class="stats-header">
+    <h4>Our Achievements</h4>
+    <h2>Measurable <span>Impact</span> We Deliver</h2>
+    <p>
+      Numbers that reflect our commitment to innovation, performance,
+      and long-term partnerships.
+    </p>
+  </div>
+
+  <div class="stats-grid">
+    <!-- STAT 1 -->
+    <div class="stat-card reveal-stat">
+      <div class="stat-ring"></div>
+      <h3 class="stat-number" data-target="150">0</h3>
+      <p>Projects Delivered</p>
+    </div>
+
+    <!-- STAT 2 -->
+    <div class="stat-card reveal-stat">
+      <div class="stat-ring"></div>
+      <h3 class="stat-number" data-target="98">0</h3>
+      <p>Client Satisfaction (%)</p>
+    </div>
+
+    <!-- STAT 3 -->
+    <div class="stat-card reveal-stat">
+      <div class="stat-ring"></div>
+      <h3 class="stat-number" data-target="24">0</h3>
+      <p>24/7 Technical Support</p>
+    </div>
+
+    <!-- STAT 4 -->
+    <div class="stat-card reveal-stat">
+      <div class="stat-ring"></div>
+      <h3 class="stat-number" data-target="10">0</h3>
+      <p>Industries Served</p>
+    </div>
+  </div>
+
+  <!-- FLOW LINE -->
+  <div class="stats-flow"></div>
+</section>
+
+
+
+<footer class="oppty-footer">
+    <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+            <img src="./322343.png" alt="Oppty Logo" class="logo">
+            <p>Elevating businesses through innovative technology solutions. From cloud architecture to secure web platforms, we build the future of digital enterprises.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+
+        <!-- Solutions Column -->
+        <div class="footer-col">
+            <h4 class="footer-h4">Our Expertise</h4>
+            <ul class="footer-links">
+                <li><a href="#">Web Engineering</a></li>
+                <li><a href="#">Mobile Ecosystems</a></li>
+                <li><a href="#">Cloud Migration</a></li>
+                <li><a href="#">Cyber Defense</a></li>
+                <li><a href="#">Digital Strategy</a></li>
+            </ul>
+        </div>
+
+        <!-- Company Column -->
+        <div class="footer-col">
+            <h4 class="footer-h4">Explore</h4>
+            <ul class="footer-links">
+                <li><a href="#">About Journey</a></li>
+                <li><a href="#">Success Stories</a></li>
+                <li><a href="#">Career Portal</a></li>
+                <li><a href="#">Partner Program</a></li>
+                <li><a href="#">Tech Blog</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Card Column -->
+        <div class="footer-col">
+            <div class="footer-contact-card">
+                <h4 class="footer-h4" style="margin-bottom: 25px;">Get in Touch</h4>
+                
+                <div class="contact-item">
+                    <i class="fas fa-location-dot"></i>
+                    <div class="contact-info">
+                        <h5>Hyderabad HQ</h5>
+                        <p>108/43, Vijaya Lakshmi Enclave, Gangaram, Hyderabad - 500050</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-info">
+                        <h5>Email Us</h5>
+                        <p>connect@opptytech.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item" style="margin-bottom: 0;">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-info">
+                        <h5>Call Support</h5>
+                        <p>+91 94912 09900</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <div class="copyright">
+            &copy; 2025 Oppty Tech Hub. All rights reserved. Built for the future.
+        </div>
+        
+    </div>
+</footer>
+
+
+<script src="services.js"></script>
+</body>
+</html>

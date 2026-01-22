@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Careers | Oppty Tech Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="career.css">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+
+
+<header class="bento-header" id="mainHeader">
+    <!-- 1. LOGO -->
+    <a href="index.html" class="logo-pill">
+        <img src="./322343.png" alt="Oppty Logo">
+    </a>
+
+    <!-- 2. CTA GROUP (Middle onwards) -->
+    <div class="cta-group">
+        <a href="academy.html" class="btn-premium btn-academy">Academy</a>
+        <a href="https://www.theprocareer.com/home" class="btn-premium btn-partner">Partner ↗</a>
+    </div>
+
+    <!-- 3. CALL ICON -->
+    <a href="tel:+919491209900" class="call-btn" title="Call Us">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <!-- 4. MENU TOGGLE -->
+    <button class="menu-toggle" id="menuToggle">
+        <span>MENU</span>
+        <i class="fa-solid fa-bars-staggered"></i>
+    </button>
+
+
+<!-- Overlay for side nav -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- Side Navigation Panel -->
+<div class="side-nav" id="sideNav">
+    <button class="close-nav" id="closeNav">&times;</button>
+    
+    <a href="index1.html" class="side-link">Home</a>
+    <a href="about.html" class="side-link">About Us</a>
+    
+    <div class="side-link">
+    <a href="services.html"class="side-link">Our Services</a>
+    <i class="fa-solid fa-chevron-down" id="servicesToggle"></i>
+
+
+        <div class="side-dropdown" id="servicesDropdown">
+           
+            <a href="solution.html" class="dropdown-item" style="color: var(--primary); font-weight: 600;">Solutions</a>
+        </div>
+    </div>
+    <a href="contact.html" class="side-link">Contact</a>
+    <a href="career.html" class="side-link">Career</a>
+</div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+  <h1>
+    Build the <span>Future of Technology</span><br>
+    With Oppty Tech Hub
+  </h1>
+
+  <p>
+    Oppty Tech Hub is not a place for routine work. It is an environment
+    where engineers, analysts, and innovators collaborate to design
+    intelligent systems that solve real-world problems at scale.
+  </p>
+
+  <p>
+    From AI-driven automation and cloud-native platforms to enterprise
+    security and digital transformation — our teams work on solutions
+    that matter.
+  </p>
+
+  <ul>
+    <li>✔ Ownership from day one</li>
+    <li>✔ Exposure to enterprise-scale systems</li>
+    <li>✔ Continuous learning & mentorship</li>
+  </ul>
+
+  <button>Explore Career Opportunities</button>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="section-title">
+    <h2>What Powers <span>Oppty</span></h2>
+    <p>
+      Our culture is driven by principles that enable people to think
+      independently, act decisively, and grow continuously.
+    </p>
+  </div>
+
+  <div class="values-track">
+    <span>OWNERSHIP</span>
+    <span>INNOVATION</span>
+    <span>ACCOUNTABILITY</span>
+    <span>TRUST</span>
+    <span>IMPACT</span>
+  </div>
+</section>
+
+<!-- BUILD -->
+<section>
+  <div class="section-title">
+    <h2>What You Will <span>Build</span></h2>
+    <p>
+      You won’t work on internal demos or isolated experiments.
+      You’ll contribute to production systems used by real businesses
+      across industries.
+    </p>
+  </div>
+
+  <div class="build-grid">
+    <div class="build-card">
+      <img src="./ai sol.jpg">
+      <div>
+        <h3>AI & Automation Platforms</h3>
+        <p>
+          Build intelligent automation systems that streamline operations,
+          enhance decision-making, and reduce complexity.
+        </p>
+      </div>
+    </div>
+
+    <div class="build-card">
+      <img src="./entr.jpg">
+      <div>
+        <h3>Enterprise IT Solutions</h3>
+        <p>
+          Design scalable, secure enterprise platforms supporting
+          thousands of users across geographies.
+        </p>
+      </div>
+    </div>
+
+    <div class="build-card">
+      <img src="./ai3.jpg">
+      <div>
+        <h3>Cloud & DevOps Systems</h3>
+        <p>
+          Engineer cloud-native architectures with high availability,
+          resilience, and performance.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ================= OPEN POSITIONS ================= -->
+<section class="jobs-section">
+
+  <div class="jobs-header">
+    <h4>Careers</h4>
+    <h2>Open <span>Positions</span></h2>
+    <p>
+      Explore exciting career opportunities at Oppty Tech Hub.
+      Join us to build innovative digital solutions and grow your career.
+    </p>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="job-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="tech">Technology</button>
+    <button class="filter-btn" data-filter="ai">AI & Data</button>
+    <button class="filter-btn" data-filter="bpo">BPO</button>
+    <button class="filter-btn" data-filter="intern">Internship</button>
+  </div>
+
+  <!-- JOB GRID -->
+  <div class="jobs-grid">
+
+    <div class="job-card tech reveal-job">
+      <h3>Software Developer</h3>
+      <p>Build scalable web & backend systems for enterprise clients.</p>
+      <span>Full-Time · Remote / Onsite</span>
+      <a href="#" class="apply-link">Apply Now →</a>
+    </div>
+
+    <div class="job-card tech reveal-job">
+      <h3>Web Developer</h3>
+      <p>Create modern, responsive, and SEO-optimized websites.</p>
+      <span>Full-Time · Onsite</span>
+      <a href="#" class="apply-link">Apply Now →</a>
+    </div>
+
+    <div class="job-card ai reveal-job">
+      <h3>AI / ML Engineer</h3>
+      <p>Design intelligent automation & predictive analytics solutions.</p>
+      <span>Full-Time · Hybrid</span>
+      <a href="#" class="apply-link">Apply Now →</a>
+    </div>
+
+    <div class="job-card bpo reveal-job">
+      <h3>BPO Executive</h3>
+      <p>Handle customer interactions and backend operations efficiently.</p>
+      <span>Full-Time · Onsite</span>
+      <a href="#" class="apply-link">Apply Now →</a>
+    </div>
+
+    <div class="job-card intern reveal-job">
+      <h3>Web Development Intern</h3>
+      <p>Learn by working on real projects with expert mentorship.</p>
+      <span>Internship · 3–6 Months</span>
+      <a href="#" class="apply-link">Apply Now →</a>
+    </div>
+
+    <div class="job-card intern reveal-job">
+      <h3>AI Intern</h3>
+      <p>Hands-on experience in AI models and automation systems.</p>
+      <span>Internship · 3–6 Months</span>
+      <a href="#" class="apply-link">Apply Now →</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- SYSTEM -->
+<section>
+  <div class="section-title">
+    <h2>Your Growth <span>System</span></h2>
+    <p>
+      Growth at Oppty is structured yet flexible. You gain responsibility,
+      exposure, and leadership progressively.
+    </p>
+  </div>
+
+  <div class="system">
+    <div class="node">
+      <h3>Learn</h3>
+      <p>Hands-on learning through real projects and expert mentorship.</p>
+    </div>
+    <div class="node">
+      <h3>Build</h3>
+      <p>Contribute to scalable systems used in production environments.</p>
+    </div>
+    <div class="node">
+      <h3>Own</h3>
+      <p>Take responsibility for features, decisions, and outcomes.</p>
+    </div>
+    <div class="node">
+      <h3>Lead</h3>
+      <p>Guide teams, influence architecture, and drive innovation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPLY NOW SECTION ================= -->
+<section class="apply-section">
+
+  <div class="apply-header">
+    <h4>Apply Now</h4>
+    <h2>Start Your <span>Career Journey</span> With Us</h2>
+    <p>
+      Take the next step in your career. Share your details and
+      let’s build the future together at Oppty Tech Hub.
+    </p>
+  </div>
+
+  <div class="apply-wrapper">
+
+    <!-- LEFT CONTENT -->
+    <div class="apply-info">
+      <h3>Why Join Oppty Tech Hub?</h3>
+      <ul>
+        <li>Work on real-world IT, AI & Web projects</li>
+        <li>Mentorship from industry experts</li>
+        <li>Growth-focused learning culture</li>
+        <li>Career acceleration opportunities</li>
+        <li>Inclusive & innovative work environment</li>
+      </ul>
+    </div>
+
+    <!-- FORM -->
+    <form class="apply-form">
+      <div class="form-group">
+        <input type="text" required>
+        <label>Full Name</label>
+      </div>
+
+      <div class="form-group">
+        <input type="email" required>
+        <label>Email Address</label>
+      </div>
+
+      <div class="form-group">
+        <input type="tel" required>
+        <label>Phone Number</label>
+      </div>
+
+      <div class="form-group">
+        <select required>
+          <option value="" disabled selected></option>
+          <option>Software Developer</option>
+          <option>Web Developer</option>
+          <option>AI / ML Engineer</option>
+          <option>IT Support Engineer</option>
+          <option>BPO Executive</option>
+          <option>Intern / Fresher</option>
+        </select>
+        <label>Position Applying For</label>
+      </div>
+
+      <div class="form-group">
+        <input type="file" required>
+        <label class="file-label">Upload Resume</label>
+      </div>
+
+      <button type="submit" class="apply-btn">
+        Submit Application →
+      </button>
+    </form>
+
+  </div>
+</section>
+
+
+
+<!-- ROLES -->
+<section>
+  <div class="section-title">
+    <h2>Open <span>Roles</span></h2>
+    <p>
+      We are looking for problem-solvers who are excited about building
+      technology that scales and evolves.
+    </p>
+  </div>
+
+  <div class="roles">
+    <div class="role">
+      <h3>Full Stack Developer</h3>
+      <p>Build robust web applications using modern frameworks and APIs.</p>
+    </div>
+    <div class="role">
+      <h3>AI & Automation Engineer</h3>
+      <p>Design intelligent systems that automate complex workflows.</p>
+    </div>
+    <div class="role">
+      <h3>Cloud & DevOps Engineer</h3>
+      <p>Develop scalable cloud infrastructure and CI/CD pipelines.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LIFE -->
+<section class="life">
+  <img src="./oppty office.jpg">
+  <div>
+    <h2>Life at Oppty Tech Hub</h2>
+    <p>
+      Life at Oppty is fast-paced, collaborative, and growth-oriented.
+      We value transparency, flexibility, and respect.
+    </p>
+    <p>
+      You’ll work with passionate professionals who believe in building
+      meaningful technology while growing together.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to Shape the Future?</h2>
+  <p>
+    If you’re driven by technology, ownership, and impact,
+    Oppty Tech Hub is where your journey begins.
+  </p>
+  <button>Apply Now</button>
+</section>
+
+
+
+
+<footer class="oppty-footer">
+    <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+            <img src="./322343.png" alt="Oppty Logo" class="logo">
+            <p>Elevating businesses through innovative technology solutions. From cloud architecture to secure web platforms, we build the future of digital enterprises.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+
+        <!-- Solutions Column -->
+        <div class="footer-col">
+            <h4 class="footer-h4">Our Expertise</h4>
+            <ul class="footer-links">
+                <li><a href="#">Web Engineering</a></li>
+                <li><a href="#">Mobile Ecosystems</a></li>
+                <li><a href="#">Cloud Migration</a></li>
+                <li><a href="#">Cyber Defense</a></li>
+                <li><a href="#">Digital Strategy</a></li>
+            </ul>
+        </div>
+
+        <!-- Company Column -->
+        <div class="footer-col">
+            <h4 class="footer-h4">Explore</h4>
+            <ul class="footer-links">
+                <li><a href="#">About Journey</a></li>
+                <li><a href="#">Success Stories</a></li>
+                <li><a href="#">Career Portal</a></li>
+                <li><a href="#">Partner Program</a></li>
+                <li><a href="#">Tech Blog</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Card Column -->
+        <div class="footer-col">
+            <div class="footer-contact-card">
+                <h4 class="footer-h4" style="margin-bottom: 25px;">Get in Touch</h4>
+                
+                <div class="contact-item">
+                    <i class="fas fa-location-dot"></i>
+                    <div class="contact-info">
+                        <h5>Hyderabad HQ</h5>
+                        <p>108/43, Vijaya Lakshmi Enclave, Gangaram, Hyderabad - 500050</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-info">
+                        <h5>Email Us</h5>
+                        <p>connect@opptytech.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item" style="margin-bottom: 0;">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-info">
+                        <h5>Call Support</h5>
+                        <p>+91 94912 09900</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <div class="copyright">
+            &copy; 2025 Oppty Tech Hub. All rights reserved. Built for the future.
+        </div>
+        
+    </div>
+</footer>
+
+<script src="career.js"></script>
+</body>
+</html>

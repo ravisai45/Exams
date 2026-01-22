@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Solutions | Oppty Tech Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="solution.css">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+
+    
+<header class="bento-header" id="mainHeader">
+    <!-- 1. LOGO -->
+    <a href="index1.html" class="logo-pill">
+        <img src="./322343.png" alt="Oppty Logo">
+    </a>
+
+    <!-- 2. CTA GROUP (Middle onwards) -->
+    <div class="cta-group">
+        <a href="academy.html" class="btn-premium btn-academy">Academy</a>
+        <a href="https://www.theprocareer.com/home" class="btn-premium btn-partner">Partner ↗</a>
+    </div>
+
+    <!-- 3. CALL ICON -->
+    <a href="tel:+919491209900" class="call-btn" title="Call Us">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <!-- 4. MENU TOGGLE -->
+    <button class="menu-toggle" id="menuToggle">
+        <span>MENU</span>
+        <i class="fa-solid fa-bars-staggered"></i>
+    </button>
+
+
+<!-- Overlay for side nav -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- Side Navigation Panel -->
+<div class="side-nav" id="sideNav">
+    <button class="close-nav" id="closeNav">&times;</button>
+    
+    <a href="index1.html" class="side-link">Home</a>
+    <a href="about.html" class="side-link">About Us</a>
+    
+   
+        <div class="side-link">
+    <a href="services.html"class="side-link">Our Services</a>
+    <i class="fa-solid fa-chevron-down" id="servicesToggle"></i>
+
+
+        <div class="side-dropdown" id="servicesDropdown">
+           
+            <a href="solution.html" class="dropdown-item" style="color: var(--primary); font-weight: 600;">Solutions</a>
+        </div>
+    </div>
+    
+    <a href="contact.html" class="side-link">Contact</a>
+    <a href="career.html" class="side-link">Career</a>
+</div>
+</header>
+
+
+
+<!-- ================= SOLUTIONS HERO ================= -->
+<section class="solutions-hero">
+
+  <!-- Animated Background -->
+  <div class="solution-grid"></div>
+
+  <!-- PROBLEM WORDS -->
+  <div class="problem-cloud">
+    <span>Scalability</span>
+    <span>Security Risks</span>
+    <span>High Costs</span>
+    <span>Downtime</span>
+    <span>Inefficiency</span>
+    <span>Legacy Systems</span>
+  </div>
+
+  <!-- CENTER CORE -->
+  <div class="solution-core">
+    <div class="core-ring"></div>
+    <div class="core-ring ring2"></div>
+
+    <h1 id="solutionTitle">
+      Turning <span>Complex Problems</span><br>
+      into Smart Digital Solutions
+    </h1>
+
+    <p id="solutionDesc">
+      Oppty Tech Hub delivers tailored technology solutions that
+      simplify operations, enhance security, and drive sustainable growth.
+    </p>
+
+    <div class="solution-cta">
+      <a href="#solutions" class="btn-main">Explore Solutions</a>
+      <a href="#contact" class="btn-outline">Talk to Experts</a>
+    </div>
+  </div>
+
+</section>
+
+
+
+<section class="solutions-engine">
+
+  <div class="engine-wrapper">
+
+    <!-- LEFT : CHALLENGES -->
+    <div class="engine-left">
+      <h2>Real Business Challenges</h2>
+
+      <ul class="challenge-list">
+        <li class="active">Unstable IT Infrastructure</li>
+        <li>Security & Compliance Risks</li>
+        <li>Manual & Inefficient Processes</li>
+        <li>Limited Scalability</li>
+        <li>High Operational Costs</li>
+      </ul>
+    </div>
+
+    <!-- CENTER : ENERGY BEAM -->
+    <div class="engine-beam">
+      <span class="beam-core"></span>
+    </div>
+
+    <!-- RIGHT : SOLUTIONS -->
+    <div class="engine-right">
+      <h2>Oppty Engineered Solutions</h2>
+
+      <div class="solution-panel active">
+        <h3>Resilient IT Architecture</h3>
+        <p>
+          Oppty Tech Hub designs and manages robust IT infrastructures
+          that ensure high availability, optimized performance,
+          and minimal downtime across business operations.
+        </p>
+      </div>
+
+      <div class="solution-panel">
+        <h3>Advanced Cybersecurity Frameworks</h3>
+        <p>
+          We implement proactive security strategies, compliance-ready
+          systems, and continuous monitoring to safeguard critical data
+          and digital assets.
+        </p>
+      </div>
+
+      <div class="solution-panel">
+        <h3>AI-Powered Automation</h3>
+        <p>
+          Our intelligent automation solutions reduce manual workloads,
+          improve accuracy, and enable faster decision-making
+          across business functions.
+        </p>
+      </div>
+
+      <div class="solution-panel">
+        <h3>Scalable Cloud & DevOps Systems</h3>
+        <p>
+          Cloud-native architectures and DevOps pipelines that
+          support growth, flexibility, and rapid deployment.
+        </p>
+      </div>
+
+      <div class="solution-panel">
+        <h3>Cost-Optimized Technology Operations</h3>
+        <p>
+          We optimize infrastructure and processes to reduce
+          operational costs while improving efficiency and ROI.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="solutions-hero-elite">
+
+  <!-- animated intelligence mesh -->
+  <canvas id="intelMesh"></canvas>
+
+  <div class="solutions-hero-inner">
+
+    <div class="hero-content">
+      <h1>
+        <span class="thin">Solutions</span><br>
+        Engineered for<br>
+        <span class="accent">Business Impact</span>
+      </h1>
+
+      <p>
+        At Oppty Tech Hub, we architect secure, scalable, and
+        intelligent digital solutions that solve real business
+        challenges — from IT infrastructure and cybersecurity
+        to AI-driven automation and digital platforms.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#solutions" class="btn-solid">Explore Our Solutions</a>
+        <a href="#contact" class="btn-outline">Consult Our Experts</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="scan-frame">
+        <img src="./solution1.jpg"
+             alt="AI Intelligence"
+             class="ai-face">
+        <span class="scan-line"></span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="oppty-difference">
+
+  <div class="diff-header">
+    <h2>Why Businesses Choose <span>Oppty Tech Hub</span></h2>
+    <p>
+      Technology decisions require depth, foresight, and long-term vision.
+      Here’s how Oppty Tech Hub delivers more than conventional providers.
+    </p>
+  </div>
+
+  <div class="diff-stage">
+
+    <!-- LEFT : OTHERS -->
+    <div class="diff-column others">
+      <h3>Typical Providers</h3>
+
+      <div class="layer base">Basic Implementation</div>
+      <div class="layer base">Limited Security</div>
+      <div class="layer base">Short-Term Focus</div>
+    </div>
+
+    <!-- RIGHT : OPPTY -->
+    <div class="diff-column oppty">
+      <h3>Oppty Tech Hub</h3>
+
+      <div class="layer oppty-layer">Strategic Business Understanding</div>
+      <div class="layer oppty-layer">Custom Architecture Design</div>
+      <div class="layer oppty-layer">Advanced Security & Compliance</div>
+      <div class="layer oppty-layer">Automation & Optimization</div>
+      <div class="layer oppty-layer">Scalable Future-Ready Systems</div>
+      <div class="layer oppty-layer">Continuous Support & Evolution</div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="solutions-wipe">
+
+  <div class="wipe-header">
+    <h2>Technology That Drives <span>Oppty Solutions</span></h2>
+    <p>
+      Every solution at Oppty Tech Hub is built on a carefully
+      engineered technology foundation designed for security,
+      scalability, and long-term performance.
+    </p>
+  </div>
+
+  <div class="wipe-grid">
+
+    <div class="wipe-card">
+      <h3>Enterprise IT Infrastructure</h3>
+      <p>
+        High-availability systems, optimized networks, proactive monitoring,
+        and resilient architecture to ensure uninterrupted business operations.
+      </p>
+    </div>
+
+    <div class="wipe-card">
+      <h3>Advanced Cybersecurity</h3>
+      <p>
+        Threat detection, compliance readiness, encryption strategies,
+        and continuous security monitoring to protect digital assets.
+      </p>
+    </div>
+
+    <div class="wipe-card">
+      <h3>Cloud & DevOps Engineering</h3>
+      <p>
+        Cloud-native systems, CI/CD pipelines, infrastructure automation,
+        and scalable deployment strategies for growing organizations.
+      </p>
+    </div>
+
+    <div class="wipe-card">
+      <h3>AI & Intelligent Automation</h3>
+      <p>
+        Smart automation, predictive analytics, and AI-driven workflows
+        that reduce costs and improve decision-making.
+      </p>
+    </div>
+
+    <div class="wipe-card">
+      <h3>Web & Digital Platforms</h3>
+      <p>
+        Secure, high-performance websites, portals, APIs,
+        and digital platforms built for usability and growth.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="solutions-data">
+
+  <div class="data-header">
+    <h2>Measurable <span>Business Impact</span></h2>
+    <p>
+      Oppty Tech Hub delivers technology solutions that create
+      measurable improvements across performance, security,
+      efficiency, and scalability.
+    </p>
+  </div>
+
+  <div class="data-layout">
+
+    <!-- LEFT : RADIAL METRICS -->
+    <div class="radial-metrics">
+       <h2>Infrastructure Uptime</h2>
+
+      <div class="radial" data-percent="98">
+       
+        <svg>
+          <circle cx="60" cy="60" r="52"></circle>
+          <circle cx="60" cy="60" r="52"></circle>
+        </svg>
+         
+        <span>98%</span>
+        
+      </div>
+      <h2>Operational Cost Reduction</h2>
+
+      <div class="radial" data-percent="65">
+        <svg>
+          <circle cx="60" cy="60" r="52"></circle>
+          <circle cx="60" cy="60" r="52"></circle>
+        </svg>
+        <span>65%</span>
+        
+      </div>
+
+    </div>
+
+    <!-- RIGHT : BAR METRICS -->
+    <div class="bar-metrics">
+
+      <div class="bar-item">
+        <label>Security Risk Reduction</label>
+        <div class="bar">
+          <span data-width="85%"></span>
+        </div>
+      </div>
+
+      <div class="bar-item">
+        <label>Process Automation</label>
+        <div class="bar">
+          <span data-width="72%"></span>
+        </div>
+      </div>
+
+      <div class="bar-item">
+        <label>Deployment Speed Improvement</label>
+        <div class="bar">
+          <span data-width="90%"></span>
+        </div>
+      </div>
+
+      <div class="bar-item">
+        <label>System Scalability Readiness</label>
+        <div class="bar">
+          <span data-width="88%"></span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<footer class="oppty-footer">
+    <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+            <img src="./322343.png" alt="Oppty Logo" class="logo">
+            <p>Elevating businesses through innovative technology solutions. From cloud architecture to secure web platforms, we build the future of digital enterprises.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+
+        <!-- Solutions Column -->
+        <div class="footer-col">
+            <h4 class="footer-h4">Our Expertise</h4>
+            <ul class="footer-links">
+                <li><a href="#">Web Engineering</a></li>
+                <li><a href="#">Mobile Ecosystems</a></li>
+                <li><a href="#">Cloud Migration</a></li>
+                <li><a href="#">Cyber Defense</a></li>
+                <li><a href="#">Digital Strategy</a></li>
+            </ul>
+        </div>
+
+        <!-- Company Column -->
+        <div class="footer-col">
+            <h4 class="footer-h4">Explore</h4>
+            <ul class="footer-links">
+                <li><a href="#">About Journey</a></li>
+                <li><a href="#">Success Stories</a></li>
+                <li><a href="#">Career Portal</a></li>
+                <li><a href="#">Partner Program</a></li>
+                <li><a href="#">Tech Blog</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Card Column -->
+        <div class="footer-col">
+            <div class="footer-contact-card">
+                <h4 class="footer-h4" style="margin-bottom: 25px;">Get in Touch</h4>
+                
+                <div class="contact-item">
+                    <i class="fas fa-location-dot"></i>
+                    <div class="contact-info">
+                        <h5>Hyderabad HQ</h5>
+                        <p>108/43, Vijaya Lakshmi Enclave, Gangaram, Hyderabad - 500050</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-info">
+                        <h5>Email Us</h5>
+                        <p>connect@opptytech.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item" style="margin-bottom: 0;">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-info">
+                        <h5>Call Support</h5>
+                        <p>+91 94912 09900</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <div class="copyright">
+            &copy; 2025 Oppty Tech Hub. All rights reserved. Built for the future.
+        </div>
+        
+    </div>
+</footer>
+
+<script src="solution.js"></script>
+</body>
+</html>
